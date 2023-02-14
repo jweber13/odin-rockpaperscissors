@@ -1,0 +1,132 @@
+/** {
+    border: 1px red solid;
+}*/
+
+/* General */
+
+html {
+    background-color: black;
+    color: #f9faf8;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+header {
+    width: 100%;
+    background-color: rgb(44, 44, 44);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/*Rule Section*/
+
+#rule-section .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#rule-section #start-btn {
+  background-color: #f9faf8;
+  color: black;
+  border: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: 'Roboto Mono', monospace;
+}
+
+#rule-section li{
+    text-align: left;
+}
+
+/* RPS Section */
+#rps-section .content{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-container {
+    transition: .2s ease-in-out 0s;
+}
+
+.btn-container img {
+    width: 75%;
+    height: auto;
+}
+
+button {
+    transition: .2s ease-in-out 0s;
+    background-color: rgb(44, 44, 44);
+    border: 1px gray solid;
+    border-radius: 5%;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: black;
+    color:black;
+}
+
+/* Score Section */
+#score-section .content{
+    display: flex;
+    justify-content: center;
+}
+
+#score-section .scorecard {
+    display: flex;
+    align-items: center;
+}
+
+#score-section .declaration {
+  flex-basis: 200px;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+#score-section .scorebox {
+    width: 50%;
+}
+
+#score-section img {
+    width: 50%;
+    height: auto;
+}
+
+/* Result Section */
+#result-section {
+  background-color: rgb(44, 44, 44);
+}
+
+#result-section .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#result-section .input-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 42px;
+  background-color: white;
+  margin-left: 8px;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}  
+}
+
+#result-section .input-cursor {
+  animation: blink .6s linear infinite alternate;
+}

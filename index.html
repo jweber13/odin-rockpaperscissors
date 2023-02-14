@@ -1,9 +1,81 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="./script.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width device-width">
+        <meta http-equiv="X-UA-compatible" content="ie=edge">
+        <title>Rock Paper Scissors</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+        <link href="./resources/styles.css" rel="stylesheet">
+        <script src="./script.js" defer></script>
     </head>
     <body>
+        <header>
+            <h1>Welcome to Rock-Paper-Scissors</h1>
+        </header>
+        <div class="main-content">
+            <!--Rules Section-->
+            <div id="rule-section">
+                <div class="content">
+                    <button id="start-btn">Start Game</button>
+                    <ol>
+                        <li>Choose between Rock, Paper, or Scissors.</li>
+                        <li>Rock beats Scissors, which beats Paper, which beats Rock.</li>
+                        <li>Between you and the computer, whomever wins the most out of 5 rounds, is the winner.</li>
+                    </ol>
+                </div>
+            </div>
 
+            <!--RPS Section-->
+            <div id="rps-section">
+                <div class="content">
+                    <div class="btn-container">
+                        <button id="rock-btn"><img src="./resources/images/hand-rock.png"></button>
+                    </div>
+                    <div class="btn-container">
+                        <button id="paper-btn"><img src="./resources/images/hand-paper.png"></button>
+                    </div>
+                    <div class="btn-container">
+                        <button id="scissors-btn"><img src="./resources/images/hand-scissors.png"></button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Score Section-->
+            <div id="score-section">
+                <div class="content">
+                    <div class="scorecard">
+                        <img src="./resources/images/Employee.png">
+                        <div class="scorebox">
+                            <p>Human</p>
+                            <h1 id="hscore">0</h1>
+                        </div>
+                    </div>
+                    <div class="declaration">
+                        <h2>Winner</h2>
+                        <p id="winner"></p>
+                    </div>
+                    <div class="scorecard">
+                        <div class="scorebox">
+                            <p>Computer</p>
+                            <h1 id="cscore">0</h1>
+                        </div>
+                        <img src="./resources/images/Robot.png">
+                    </div>
+                </div>
+            </div>
+
+            <!--Result Section-->
+            <div id="result-section">
+                <div class="content">
+                    <!--<h2 id="game-res">Result:</h2>
+                    <h2 id="game-res-fil"></h2>-->
+                    <span id="game-res-fil" class="sentence"></span>
+                    <span class="input-cursor"></span>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

@@ -10,6 +10,9 @@ html {
     font-size: 16px;
     text-align: center;
     font-family: 'Roboto Mono', monospace;
+    background-image: url("./images/15621-NQG9R6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header {
@@ -67,12 +70,17 @@ button {
     border-radius: 5%;
     padding: 1rem;
     cursor: pointer;
+    position: relative;
 }
 
 button:hover {
     transform: scale(1.05);
     background-color: black;
     color:black;
+}
+
+button:active {
+    transform:scale(0.8,0.8);
 }
 
 /* Score Section */
@@ -110,6 +118,8 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 2.5rem;
 }
 
 #result-section .input-cursor {

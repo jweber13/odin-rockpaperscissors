@@ -81,11 +81,6 @@ const getComputerChoice = () => {
   return cChoice;  
 }
 
-const typeRes = (a, b) => {
-  text = `The ${a} has won with ${b} victories.`
-  //endRes.textContent = `The ${a} has won with ${b} victories.`
-}
-
 //run a round between players and computers
 function playRound(playerSelection, computerSelection) {
   if (gameOpen == true && numGames < 5){
@@ -118,49 +113,18 @@ function playRound(playerSelection, computerSelection) {
     }
     numGames += 1;
     if (numGames == 5){
-      c > p ? typeSentence(`Computers have won with ${c} victories.`, endRes) : typeSentence(`Humans have won with ${p} victories.`, endRes);
+      //c > p ? typeSentence(`Computer wins with ${c} victories.`, endRes) : typeSentence(`Player wins with ${p} victories.`, endRes);
+        if( c > p){
+            typeSentence(`Computer wins with ${c} victories.`, endRes);
+        } else if ( p > c) {
+            typeSentence(`Player wins with ${p} victories.`, endRes);
+        } else {
+            typeSentence(`Nobody wins! Tie game.`, endRes);
+        }
     }
   } else {
     win.innerHTML = "Click Start"
   }
-  //result == "win" ? hScore.textContent = p+=1 : cScore.textContent = c+=1;
-}
-
-function BeginGame() {
-  
-  /*
-  Add an ON / OFF condition to the game
-  ON is triggered by the start game button
-  Add a tracker to the # of games played
-  If the tracker is 5, then the game switches to OFF
-  The winner is displayed at this time
-  
-  
-  //OLD CODE
-  console.log("5 games of rock paper scissors");
-  compScore = 0;
-  playScore = 0;
-  /*for (let i=0; i<5; i++){
-      console.log(`Round ${i+1}: Choose Rock, Paper or Scissors`);
-      var uInput = prompt(">").toLowerCase();
-      var cInput = getComputerChoice();
-      let play = playRound(uInput, cInput);
-      console.log(play);
-      switch (play) {
-          case "win": 
-              playScore +=1;
-              break;
-          case "lose": 
-              compScore +=1;
-              break;
-          default:
-              break;
-      }
-      console.log(`Player: ${playScore} vs Computer: ${compScore}`);
-  }
-  compScore > playScore ? console.log(`Computer won with ${compScore} victories...`)
-    : playScore > compScore ? console.log(`Player Won with ${playScore} victories!`)
-      : console.log("Tie Game");*/
 }
 
 game();
